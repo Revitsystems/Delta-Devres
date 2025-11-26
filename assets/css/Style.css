@@ -4,6 +4,7 @@
   --base-primary-color: #1a1a1a;
   --base-secondary-color: #0f1c2c;
   --white: #ffffff;
+  --ofWhite: #f9f9f9;
   --black: #000000;
 }
 
@@ -21,8 +22,36 @@
   font-optical-sizing: auto;
   font-weight: 400;
   color: var(--black);
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
+}
+
+.plus-jakarta-sans-super-small {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 9px;
+}
+
+.plus-jakarta-sans-small {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 15px;
+}
+
+.plus-jakarta-sans-large {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 5.3rem;
+}
+
+.playball-regular {
+  font-family: "Playball", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 7rem;
 }
 
 /**************************/
@@ -46,7 +75,7 @@
 
 .delta-hero-section-container {
   width: 100%;
-  height: 700px;
+  height: 800px;
   background: url("../images/delta-hero-background-image.jpg");
   background-size: cover;
   background-position: center;
@@ -95,21 +124,21 @@
   display: flex;
   gap: 30px;
   list-style: none;
-  padding: 14px 35px;
+  padding: 17px 39px;
   margin: 0;
   border-radius: 50px;
   background-color: var(--white);
 }
 
 .delta-navbar-holder ul li {
-  border-bottom: 1.5px solid transparent;
+  border-bottom: 2px solid transparent;
   padding-top: 1px;
   padding-bottom: 2px;
   transition: all ease 0.5s;
 }
 
 .delta-navbar-holder ul li:hover {
-  border-bottom: 1.5px solid var(--gold-primary-color);
+  border-bottom: 2px solid var(--gold-primary-color);
   padding-bottom: 2px;
   transition: all ease 0.5s;
 }
@@ -133,9 +162,200 @@
 .delta-hero-content {
   width: 70%;
   margin: auto;
-  background-color: #1a1a1a4c;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
 }
 
 .delta-hero-content-image-holder {
   display: flex;
+  list-style: none;
+}
+
+.delta-hero-content-image-holder li {
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid var(--white);
+  line-height: 1;
+}
+
+.delta-hero-content-image-holder {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.delta-hero-content-image-holder li {
+  margin-bottom: 10px;
+  position: relative;
+  background-color: var(--ofWhite);
+}
+
+.delta-hero-content-image-holder li:nth-child(1) {
+  left: 0%;
+}
+
+.delta-hero-content-image-holder li:nth-child(2) {
+  left: -13px;
+}
+
+.delta-hero-content-image-holder li:nth-child(3) {
+  left: -25px;
+}
+
+.delta-hero-content-image-holder li:nth-child(4) {
+  left: -37px;
+}
+
+.delta-hero-content-image-holder li:nth-child(5) {
+  left: -48px;
+}
+.delta-hero-content-image-holder li img {
+  height: 100%;
+  scale: 2.5;
+  position: relative;
+  top: 13px;
+}
+
+.delta-hero-content-image-holder li span {
+  margin: 0;
+  padding: 0;
+  height: 20px;
+}
+
+.delta-hero-content-image-holder li .content-text-1 {
+  margin-top: 4px;
+}
+
+.delta-hero-content-image-holder li .content-text-2 {
+  margin-bottom: 4px;
+}
+
+/******** Delta Hero Text Section ********/
+
+.delta-hero-content-hero-text-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.delta-hero-content-header-text h1:nth-child(1) {
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+
+.delta-hero-content-header-text h1:nth-child(2) {
+  position: relative;
+  top: -30px;
+  background: linear-gradient(
+    to bottom,
+    var(--base-primary-color),
+    var(--base-secondary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.delta-hero-content-header-text h1 span {
+  background: linear-gradient(
+    to bottom,
+    var(--gold-primary-color),
+    var(--gold-secondary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.delta-hero-content-paragraph-text {
+  text-align: center;
+  width: 680px;
+  line-height: 30px;
+}
+
+/******** Delta Hero Button Section ********/
+
+.delta-hero-content-button {
+  margin-top: 40px;
+  gap: 10px;
+  display: flex;
+}
+
+.delta-hero-content-button button {
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+.delta-hero-content-button button:nth-child(1) {
+  background: linear-gradient(
+    to bottom,
+    var(--gold-primary-color),
+    var(--gold-secondary-color)
+  );
+  border: none;
+}
+
+.delta-hero-content-button button:nth-child(2) {
+  background-color: var(--white);
+  border: 1px solid var(--black);
+}
+
+/***********************************/
+/** Delta Infinite Slider Section **/
+/***********************************/
+
+.infinite-strip {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    var(--gold-primary-color),
+    var(--gold-secondary-color)
+  );
+  padding: 15px 0;
+  position: relative;
+}
+
+/* Inner track that scrolls */
+.strip-track {
+  display: flex;
+  width: max-content;
+  gap: 60px; /* spacing between items */
+  animation: slide-right 20s linear infinite; /* speed */
+}
+
+/* Text styling */
+.strip-track span {
+  font-size: 20px;
+  color: var(--black);
+  font-weight: 600;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+/* Add arrows if you want */
+.strip-track span::after {
+  content: "►";
+  margin-left: 12px;
+  font-size: 17px;
+  color: white;
+}
+
+/* Keyframes for infinite scrolling */
+@keyframes slide-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }
