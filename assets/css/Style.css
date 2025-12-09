@@ -121,8 +121,7 @@ body {
 }
 
 .delta-hero {
-  width: 98%;
-  padding-top: 20px;
+  width: 100%;
   height: 100%;
   margin: auto;
   display: flex;
@@ -133,13 +132,15 @@ body {
 /***** Delta Hero Navbar Section *****/
 
 .delta-navbar-holder {
+  padding-top: 20px;
   height: 70px;
   width: 100%;
   background-color: var(--primary-color);
 }
 
 .delta-navbar {
-  width: 100%;
+  width: 98%;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -148,8 +149,8 @@ body {
 /***** Delta Hero logo Section *****/
 
 .delta-logo {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
 }
 
 .delta-logo img {
@@ -197,6 +198,17 @@ body {
   );
 }
 
+.menu-btn {
+  height: 40px;
+  display: none;
+  width: 40px;
+}
+
+.menu-btn img {
+  width: 100%;
+  height: 100%;
+}
+
 /******** Delta Hero content Section *******/
 .delta-hero-content {
   width: 70%;
@@ -210,6 +222,8 @@ body {
 .delta-hero-content-image-holder {
   display: flex;
   list-style: none;
+  position: relative;
+  left: 30px;
 }
 
 .delta-hero-content-image-holder li {
@@ -320,7 +334,7 @@ body {
 
 .delta-hero-content-paragraph-text {
   text-align: center;
-  width: 680px;
+  max-width: 680px;
   line-height: 30px;
 }
 
@@ -549,12 +563,19 @@ body {
 }
 
 /* STATS ROW */
+
+.delta-about-us-stats-container {
+  width: 100%;
+  overflow-x: scroll;
+}
+
 .delta-about-us-stats {
   max-width: 1000px;
   margin: auto;
   margin-top: 70px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 50px;
   text-align: center;
 }
 
@@ -867,7 +888,7 @@ body {
 }
 
 .clients-section-logos img {
-  width: 120px;
+  width: 60px;
   opacity: 0.9;
   transition: 0.3s;
 }
@@ -904,6 +925,7 @@ body {
 }
 
 .newsletter-section-text h3 {
+  color: var(--white);
   margin-bottom: 30px;
 }
 
@@ -923,6 +945,7 @@ body {
 }
 .newsletter-section-input {
   padding: 14px 18px;
+  height: 50px;
   border-radius: 30px;
   border: 1px solid transparent; /* important for focus ring */
   width: 280px;
@@ -993,7 +1016,7 @@ body {
 
 .footer-section-links {
   display: flex;
-  gap: 120px;
+  gap: 100px;
 }
 
 .footer-section-column {
@@ -1548,7 +1571,265 @@ textarea:focus {
   font-size: 20px;
 }
 
+/*************************************/
+/** THIS IS THE DELTA OUR WORK PAGE **/
+/*************************************/
+
+.our-work-page {
+  background: url("../images/delta-our-work-hero-background-image.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+}
+
+.our-work-page .our-work-page-header {
+  color: var(--white);
+}
+
+/* MAIN SECTION */
+.our-work-page-section {
+  width: 100%;
+  padding: 50px 0;
+  background: #ffffff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* ROW STRUCTURE */
+.our-work-page-row,
+.our-work-page-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  width: 90%;
+  margin: auto;
+}
+
+/* LEFT SMALL TITLE */
+.our-work-page-mini-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--faded-text);
+}
+
+/* MAIN BIG TITLE */
+.our-work-page-main-title {
+  margin-top: 10px;
+  font-size: 4rem;
+}
+
+/* RIGHT DESCRIPTION TEXT */
+.our-work-page-desc {
+  font-size: 20px;
+  color: #666;
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+/* SUBTITLE */
+.our-work-page-subtitle {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* KEY AREA LIST */
+.our-work-page-key-list {
+  display: flex;
+  gap: 20px;
+}
+
+.our-work-page-key-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.our-work-page-key-list li {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.our-work-page-key-list li span {
+  margin-left: 5px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  color: var(--faded-text);
+}
+
+/* DIVIDER */
+.our-work-page-divider {
+  width: 95%;
+  margin: 40px auto;
+  border: none;
+  border-top: 2px solid #cce0ff;
+}
+
+.our-work-page-main-title span {
+  color: var(--gold-primary-color);
+  font-size: 4rem;
+}
+
+/* VIDEO BLOCK */
+.our-work-page-video-container {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  margin-top: 60px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-image: url("../images/delta-our-work-why-businesses-choose-us-background-image.jpg");
+  background-position: center 20%;
+  background-size: cover;
+}
+
+.our-work-page-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* FEATURE CARDS */
+.our-work-page-features {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+  gap: 30px;
+}
+
+.our-work-page-feature-card {
+  background: #fafafa;
+  padding: 20px;
+  height: 150px;
+  border-radius: 16px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.shift {
+  width: 70%;
+}
+
+.our-work-page-feature-card-icon {
+  width: 70px;
+  padding: 10px;
+  background: linear-gradient(
+    to bottom,
+    var(--gold-primary-color),
+    var(--gold-secondary-color)
+  );
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.our-work-page-feature-card-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.our-work-page-feature-card span h4 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.our-work-page-feature-card span p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+/* ************************************************************ */
+/***** the our work focus part with cards that have images ******/
+/* ************************************************************ */
+
+.our-work-focus-container {
+  background-color: var(--ofWhite);
+}
+
+.our-work-focus-card {
+  padding: 20px;
+  padding-bottom: 0;
+  background-color: var(--white);
+}
+
+.our-work-focus-card .our-focus-area-card-title {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.our-work-focus-card-img-container {
+  background-color: var(--gold-secondary-color);
+  height: 300px;
+  border-bottom-left-radius: 0;
+  padding: 0;
+  border-bottom-right-radius: 0;
+  background-position: center;
+  background-size: cover;
+}
+
+/********************/
+/** RESPONSIVENESS **/
+/********************/
+
+/* RESPONSIVE */
+
 @media (max-width: 900px) {
+  /* The Nav Bar Styling */
+
+  .delta-navbar-holder {
+    height: 70px;
+    width: 100%;
+    background-color: var(--white);
+  }
+
+  .delta-navbar {
+    position: relative;
+    bottom: 10px;
+  }
+
+  .delta-hero-content {
+    width: 90%;
+  }
+  .menu-btn {
+    display: block;
+  }
+
+  .delta-navbar-holder ul,
+  .delta-navbar-holder button {
+    display: none;
+  }
+
+  /**********************************/
+  /** Delta-Our-Focus-Area-Section **/
+  /**********************************/
+  .our-focus-area-grid {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  .our-work-page-row,
+  .our-work-page-row-2 {
+    grid-template-columns: 1fr;
+  }
+
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -1556,6 +1837,20 @@ textarea:focus {
 
 /* RESPONSIVE ADJUSTMENTS */
 @media (max-width: 980px) {
+  .newsletter-section-container {
+    background: linear-gradient(
+      to right,
+      var(--gold-primary-color),
+      var(--gold-secondary-color)
+    );
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .delta-business-section {
     padding: 22px;
   }
@@ -1568,7 +1863,157 @@ textarea:focus {
   }
 }
 
-@media (max-width: 740px) {
+@media (max-width: 800px) {
+  /******************************/
+  /** DELTA HOME ABOUT SECTION **/
+  /******************************/
+
+  .delta-about-us-title,
+  .our-focus-area-title,
+  .clients-section-title {
+    font-size: 2rem;
+  }
+
+  /* MAIN GRID */
+  .delta-about-us-middle-content-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 70px;
+  }
+
+  .delta-about-us-image-wrapper {
+    height: 426px;
+  }
+
+  /* STATS ROW */
+  .delta-about-us-stats-container {
+    width: 100%;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .delta-about-us-stats-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .delta-about-us-stats {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 70px;
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .delta-about-us-stat-item {
+    display: flex;
+    justify-content: center;
+    min-width: 150px;
+    flex-direction: column;
+  }
+
+  .delta-about-us-stat-item-arrow {
+    font-size: 1.2em;
+    min-width: 10px;
+    color: var(--faded-text);
+  }
+
+  .delta-about-us-stat-item h3 {
+    margin: 0;
+    font-size: 17px;
+    background: linear-gradient(
+      to bottom,
+      var(--gold-primary-color),
+      var(--gold-secondary-color)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .delta-about-us-stat-item p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--faded-text);
+  }
+
+  /******************************/
+  /** Delta-newsletter-section **/
+  /******************************/
+
+  .newsletter-section {
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    max-width: 1500px;
+    margin: auto;
+  }
+
+  .newsletter-section-input {
+    padding: 14px 18px;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid transparent; /* important for focus ring */
+    width: 220px;
+    background-color: var(--silver-light-darker);
+    outline: none;
+    color: var(--black);
+    font-size: 15px;
+    transition: all 0.25s ease;
+  }
+
+  /* Placeholder styling */
+  .newsletter-section-input::placeholder {
+    color: var(--faded-text);
+    font-weight: 400;
+  }
+
+  /* Focus state (makes UI feel premium) */
+  .newsletter-section-input:focus {
+    border-color: var(--gold-primary-color);
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(217, 165, 32, 0.25);
+  }
+
+  .newsletter-section-button {
+    padding: 14px 25px;
+    border-radius: 30px;
+    border: none;
+    background: var(--white);
+    color: var(--black);
+    border: 1px solid var(--black);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s;
+  }
+
+  .newsletter-section-button:hover {
+    background: #222;
+  }
+
+  .footer-section-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-between;
+  }
+
+  .footer-section-links {
+    display: flex;
+    width: 100%;
+    gap: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
   .delta-business-topbar {
     flex-direction: column;
     align-items: flex-start;
@@ -1607,5 +2052,211 @@ textarea:focus {
   }
   .delta-business-intro {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 650px) {
+  /************************/
+  /** Delta Hero Section **/
+  /************************/
+
+  .delta-home-hero-section-container {
+    height: 700px;
+  }
+
+  .delta-hero-content-header-text h1 {
+    font-size: 3.5rem;
+  }
+
+  .delta-hero-content-paragraph-text {
+    width: 90%;
+  }
+
+  .delta-hero-content-button button {
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+  }
+
+  /******************************/
+  /** DELTA HOME ABOUT SECTION **/
+  /******************************/
+
+  /* BUTTON */
+  .delta-about-us-button {
+    margin-top: 15px;
+    background: linear-gradient(
+      to bottom,
+      var(--gold-primary-color),
+      var(--gold-secondary-color)
+    );
+    border: none;
+    padding: 15px 30px;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  /**********************************/
+  /** Delta-Our-Focus-Area-Section **/
+  /**********************************/
+  .our-focus-area-grid {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 28px;
+  }
+
+  /* *********************** */
+  /** Delta-why-us-Section  **/
+  /* *********************** */
+  .why-us-section-card {
+    margin: 0 20px 20px;
+    width: 100%;
+    padding: 25px 25px;
+    border-radius: 20px;
+    background: linear-gradient(
+      90deg,
+      var(--white),
+      var(--silver-light-lighter)
+    );
+    backdrop-filter: blur(1px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+  /* MAIN HEADING */
+  .why-us-section-title {
+    color: var(--black);
+    line-height: 1.3;
+    margin: 15px 0 15px;
+    font-size: 1.6rem;
+  }
+
+  /* HIGHLIGHTED GOLD TEXT */
+  .why-us-section-highlight {
+    font-size: 1.6rem;
+  }
+
+  /******************************/
+  /** Delta-newsletter-section **/
+  /******************************/
+
+  .newsletter-section-text h3 {
+    color: var(--white);
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+
+  .newsletter-section-text p {
+    color: #333;
+    font-size: 15px;
+    max-width: 420px;
+  }
+
+  .the-bottom-tag-of-news-letter {
+    margin-top: 10px;
+  }
+
+  .newsletter-section-form {
+    display: flex;
+    gap: 10px;
+  }
+  .newsletter-section-input {
+    padding: 14px 18px;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid transparent; /* important for focus ring */
+    width: 200px;
+    background-color: var(--silver-light-darker);
+    outline: none;
+    color: var(--black);
+    font-size: 15px;
+    transition: all 0.25s ease;
+  }
+
+  /* Placeholder styling */
+  .newsletter-section-input::placeholder {
+    color: var(--faded-text);
+    font-weight: 400;
+  }
+
+  /* Focus state (makes UI feel premium) */
+  .newsletter-section-input:focus {
+    border-color: var(--gold-primary-color);
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(217, 165, 32, 0.25);
+  }
+
+  .newsletter-section-button {
+    padding: 10px 10px;
+    border-radius: 30px;
+    border: none;
+    background: var(--white);
+    color: var(--black);
+    border: 1px solid var(--black);
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .newsletter-section-button:hover {
+    background: #222;
+  }
+}
+
+@media (max-width: 550px) {
+  .newsletter-section-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .newsletter-section-input {
+    /* important for focus ring */
+    width: 100%;
+  }
+
+  /**********************************/
+  /** Delta-Our-Focus-Area-Section **/
+  /**********************************/
+  .our-focus-area-grid {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 28px;
+  }
+
+  /* *********************** */
+  /** Delta-why-us-Section  **/
+  /* *********************** */
+
+  /* MAIN HEADING */
+  .why-us-section-title {
+    color: var(--black);
+    line-height: 1.3;
+    margin: 15px 0 15px;
+    font-size: 1rem;
+  }
+
+  /* HIGHLIGHTED GOLD TEXT */
+  .why-us-section-highlight {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .delta-hero-content {
+    width: 100%;
+  }
+  .delta-hero-content-header-text h1 {
+    font-size: 2.6rem;
+  }
+
+  .delta-hero-content-header-text .italic {
+    bottom: 0px;
   }
 }
