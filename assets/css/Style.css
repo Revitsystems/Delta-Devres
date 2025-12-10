@@ -13,6 +13,7 @@
   --ofa-faded-purple: #dac2fb66;
   --ofa-yellow: #fcb700;
   --border-color: #64646480;
+  --ofa-very-faded-yellow: #efcf7918;
 }
 
 * {
@@ -1729,7 +1730,6 @@ textarea:focus {
 }
 
 .our-work-page-feature-card-icon {
-  width: 70px;
   padding: 10px;
   background: linear-gradient(
     to bottom,
@@ -1737,12 +1737,14 @@ textarea:focus {
     var(--gold-secondary-color)
   );
   border-radius: 100px;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .our-work-page-feature-card-icon img {
-  width: 100%;
-  height: 100%;
+  width: 50px;
+  height: 50px;
 }
 
 .our-work-page-feature-card span h4 {
@@ -1783,6 +1785,231 @@ textarea:focus {
   border-bottom-right-radius: 0;
   background-position: center;
   background-size: cover;
+}
+
+/* =============================== */
+/*   Delta Stats Metric Section    */
+/* =============================== */
+.delta-stats-metric-section-container {
+  width: 100%;
+  background-color: var(--white);
+  padding-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ring-holder {
+  position: absolute;
+  left: 35%;
+  top: 3%;
+  z-index: 0;
+}
+
+.ring {
+  border: 10px solid var(--ofa-very-faded-yellow);
+  height: 550px;
+  border-radius: 50%;
+  width: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ring-2 {
+  height: 450px;
+  width: 450px;
+}
+
+.ring-3 {
+  height: 350px;
+  width: 350px;
+}
+
+.delta-stats-metric-section {
+  width: 100%;
+  max-width: 1500px;
+  z-index: 3;
+  margin: auto;
+  position: relative;
+  padding: 40px 0 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.delta-stats-metric-section-top-text {
+  width: 100%;
+  text-align: center;
+}
+
+.delta-stats-metric-section-top-text h5 {
+  color: var(--faded-text);
+}
+
+.delta-stats-metric-section-top-text p {
+  margin: auto;
+  width: 60%;
+  line-height: 2;
+  font-size: 17px;
+}
+
+.delta-stats-metric-container {
+  max-width: 1100px;
+  width: 90%;
+  margin: auto;
+  margin-top: 130px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Cards */
+.delta-stats-metric-item {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+  text-align: center;
+  width: 300px;
+}
+
+.delta-stats-metric-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.middle-card {
+  position: relative;
+  bottom: 90px;
+}
+
+/* Number */
+.delta-stats-metric-item h3 {
+  font-size: 42px;
+  margin: 0 0 12px 0;
+}
+
+/* Title */
+.delta-stats-metric-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
+}
+
+/* Description */
+.delta-stats-metric-desc {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Background color variants already exist in your Theme */
+.faded-yellow {
+  background-color: #fff7dd;
+}
+
+.faded-purple {
+  background-color: #f4edff;
+}
+
+/* =============================== */
+/*          PROJECTS SECTION       */
+/* =============================== */
+
+.delta-projects-section {
+  text-align: center;
+  padding: 70px 0 50px;
+  width: 100%;
+}
+
+.delta-projects-subtitle {
+  color: #777;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.delta-projects-title {
+  font-weight: 700;
+  line-height: 1.3;
+  max-width: 850px;
+  margin: 0 auto 40px;
+  color: #1a1a1a;
+}
+
+.highlight-yellow {
+  background: linear-gradient(
+    to bottom,
+    var(--gold-primary-color),
+    var(--gold-secondary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* GRID */
+.delta-projects-grid-container {
+  width: 90%;
+  margin: auto;
+  overflow-x: auto;
+  padding: 10px 0px;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.delta-projects-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.delta-projects-grid {
+  width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* PROJECT CARD */
+.delta-project-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.08);
+  width: 300px;
+  transition: 0.3s;
+}
+
+.delta-project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* IMAGE */
+.delta-project-image {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+}
+
+.delta-project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CAPTION */
+.delta-project-caption {
+  padding: 18px 12px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
 }
 
 /********************/
@@ -1904,6 +2131,11 @@ textarea:focus {
   /* DELTA OUR WORK PAGE  */
   /* ******************** */
 
+  .our-work-page,
+  .contact-page {
+    height: 500px;
+  }
+
   .our-work-page-feature-card {
     min-height: 70px;
   }
@@ -1912,9 +2144,20 @@ textarea:focus {
     width: 90%;
   }
 
-  .our-work-page-feature-card-icon {
-    height: 40px;
-    width: auto;
+  /* =============================== */
+  /*   Delta Stats Metric Section    */
+  /* =============================== */
+
+  .delta-stats-metric-container {
+    grid-template-columns: 1fr;
+  }
+
+  .delta-projects-grid {
+    width: 1100px;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    justify-content: start;
   }
 }
 
@@ -1953,7 +2196,8 @@ textarea:focus {
   .delta-business-title,
   .delta-approach-title,
   .our-work-page-main-title,
-  .our-work-page-main-title span {
+  .our-work-page-main-title span,
+  .delta-projects-title {
     font-size: 2rem;
   }
 
@@ -2112,6 +2356,30 @@ textarea:focus {
 
   .delta-about-hero-section-container {
     height: 1300px;
+  }
+
+  /* =============================== */
+  /*   Delta Stats Metric Section    */
+  /* =============================== */
+
+  .delta-stats-metric-container {
+    max-width: 1100px;
+    width: 90%;
+    margin: auto;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .delta-stats-metric-section-top-text p {
+    width: 95%;
+  }
+
+  .middle-card {
+    bottom: 0px;
   }
 }
 
@@ -2325,6 +2593,15 @@ textarea:focus {
     display: block;
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  /* ******************* */
+  /* DELTA OUR WORK PAGE  */
+  /* ******************** */
+
+  .our-work-page,
+  .contact-page {
+    height: 500px;
   }
 }
 
