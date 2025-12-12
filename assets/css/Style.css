@@ -109,6 +109,91 @@ body {
   margin: auto;
 }
 
+/* SIDEBAR (COVERS FULL PAGE WHEN OPENED) */
+.project-page-sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%; /* hidden initially */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--base-primary-color),
+    var(--base-secondary-color)
+  );
+  color: var(--white);
+  z-index: 10000;
+  padding: 30px 25px;
+  transition: 0.5s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* When active (JS will add class) */
+.project-page-sidebar.active {
+  left: 0;
+}
+
+/************** HEADER (TITLE + CLOSE BTN) **************/
+.project-page-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-page-close-nav-btn {
+  background: transparent;
+  border: 2px solid var(--gold-primary-color);
+  color: var(--gold-primary-color);
+  padding: 5px 15px;
+  border-radius: 6px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/************** LINK ITEMS **************/
+.project-page-sidebar-links {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.project-page-sidebar-links li a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 600;
+  border-left: 4px solid transparent;
+  padding-left: 12px;
+  transition: 0.3s;
+}
+
+.project-page-sidebar-links li a:hover {
+  border-left: 4px solid var(--gold-primary-color);
+  color: var(--gold-secondary-color);
+}
+
+.project-page-sidebar .btn {
+  padding: 10px 20px;
+  border: 3px solid var(--gold-primary-color);
+  width: 150px;
+  color: var(--white);
+  margin-top: 30px;
+  transition: all 0.3s;
+}
+
+.project-page-sidebar .btn:hover {
+  padding: 10px 20px;
+  border: 3px solid var(--white);
+  width: 150px;
+  color: var(--gold-secondary-color);
+  transition: all 0.3s;
+}
+
 /************************/
 /** Delta Hero Section **/
 /************************/
@@ -134,9 +219,18 @@ body {
 
 .delta-navbar-holder {
   padding-top: 20px;
-  height: 70px;
+  position: fixed;
+  z-index: 10;
+  top: 0px;
+  height: auto;
   width: 100%;
-  background-color: var(--primary-color);
+  background-color: transparent;
+  padding-bottom: 20px;
+}
+
+#navbar.scrolled {
+  background: #0f1c2cf4;
+  backdrop-filter: blur(5px);
 }
 
 .delta-navbar {
@@ -208,6 +302,15 @@ body {
 .menu-btn img {
   width: 100%;
   height: 100%;
+}
+
+.menu-btn:hover {
+  background: linear-gradient(
+    to bottom,
+    var(--gold-primary-color),
+    var(--gold-secondary-color)
+  );
+  border-radius: 5px;
 }
 
 /******** Delta Hero content Section *******/
@@ -456,7 +559,7 @@ body {
 /* LEFT IMAGE */
 
 .delta-about-us-image-wrapper {
-  background-image: url("../images/icon-asset-about-us.jpg");
+  background-image: url("../images/icon-asset-about-us.jpeg");
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -490,6 +593,11 @@ body {
 
 .delta-about-us-progress-list li {
   margin-bottom: 25px;
+}
+
+.delta-about-us-progress-list li p {
+  margin-top: 10px;
+  color: var(--faded-text);
 }
 
 .delta-about-us-progress-label-and-value-container {
@@ -751,7 +859,7 @@ body {
   max-width: 1300px;
   margin: auto;
   height: 700px;
-  background-image: url("../images/why-us-background-img.jpg");
+  background-image: url("../images/why-us-background-img.jpeg");
   background-position: center;
   background-size: cover;
   align-items: end;
@@ -845,6 +953,7 @@ body {
   border: 1px solid var(--black);
   cursor: pointer;
   transition: 0.3s;
+  padding: 0px 5px;
 }
 
 .why-us-section-button:hover {
@@ -1061,7 +1170,8 @@ body {
 }
 
 .about-page-margin-top {
-  margin-top: 100px;
+  margin-top: 0px;
+  margin-bottom: 40px;
 }
 
 .delta-about-us-page {
@@ -1072,7 +1182,8 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin: auto;
+  margin-top: 0;
+  margin: 0 auto 0 auto;
 }
 
 .delta-about-page-hero-grid-card {
@@ -2012,6 +2123,287 @@ textarea:focus {
   color: #333;
 }
 
+/*==========================*/
+/** DELTA PROJECTS SECTION **/
+/*==========================*/
+
+/************************************/
+/** PROJECT PAGE CLIENTS SECTION  **/
+/************************************/
+
+.project-page-clients-section-container {
+  width: 100%;
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.project-page-clients-section {
+  width: 95%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.project-page-subtitle {
+  font-size: 13px;
+  color: var(--faded-text);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.project-page-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  line-height: 1.2;
+}
+
+.project-page-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+/********** CARD BASE STYLE **********/
+.project-page-card {
+  border-radius: 22px;
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+  min-height: 380px;
+}
+
+/** The curved top shapes **/
+.project-page-card::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 40px 0 80px 0;
+  transform: rotate(25deg);
+}
+
+/********* IMAGE BOX *********/
+.project-page-image-wrap {
+  width: 100%;
+  height: 190px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.project-page-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/********* TEXT AREA *********/
+.project-page-text h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.project-page-text p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/********* COLOR VARIANTS *********/
+.project-page-yellow {
+  background: #f4b81a;
+}
+
+.project-page-purple {
+  background: #d4c2ff;
+}
+
+.project-page-blue {
+  background: #dcecff;
+}
+
+.project-page-yellow-2 {
+  background: #f6d88a;
+}
+
+/**************************************/
+/*** PROJECT PAGE — GALLERY SECTION ***/
+/**************************************/
+
+.project-page-gallery-section {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px 0;
+}
+
+.project-page-gallery-grid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.project-page-gallery-item {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.project-page-gallery-item2 {
+  height: 530px;
+}
+
+.project-page-gallery-item-split {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.project-page-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/********** RESPONSIVE **********/
+
+@media (max-width: 900px) {
+  .project-page-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-page-gallery-item {
+    height: 230px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-page-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-page-gallery-item {
+    height: 260px;
+  }
+}
+
+/********************************************/
+/*** PROJECT PAGE — TESTIMONIAL SECTION   ***/
+/********************************************/
+
+.project-page-testimonial-section {
+  width: 100%;
+  margin: auto;
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.project-page-testimonial-container {
+  width: 95%;
+  max-width: 1500px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  margin: auto;
+  align-items: start;
+}
+
+/************** LEFT SIDE **************/
+.project-page-testimonial-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: 400px;
+}
+
+.project-page-testimonial-subtitle {
+  font-size: 13px;
+  color: var(--faded-text);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.project-page-testimonial-title {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.project-page-testimonial-desc {
+  width: 90%;
+  color: var(--faded-text);
+  line-height: 1.7;
+}
+
+/************** RIGHT SIDE — CARDS **************/
+
+.project-page-testimonial-right {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.project-page-testimonial-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px;
+  background: #f7f7f7;
+  position: relative;
+  margin-left: 50px;
+  border-left: 6px solid transparent;
+  border-left: 10px solid var(--border-color);
+}
+
+.project-page-testimonial-card-highlight {
+  border-left: 10px solid #e4b200;
+  position: relative;
+  margin: 0;
+  margin-right: 40px;
+}
+
+.project-page-testimonial-avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.project-page-testimonial-content h3 {
+  font-size: 17px;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.project-page-testimonial-content p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* QUOTE ICON */
+.project-page-testimonial-quote {
+  font-size: 28px;
+  margin-left: auto;
+  opacity: 0.3;
+  height: 100px;
+  display: flex;
+  justify-content: start;
+}
+
+.project-page-testimonial-quote.yellow {
+  color: #e4b200;
+  opacity: 1;
+}
+
 /********************/
 /** RESPONSIVENESS **/
 /********************/
@@ -2033,7 +2425,7 @@ textarea:focus {
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
     position: relative;
-    margin: auto;
+    margin: 10 auto auto auto;
   }
 
   .delta-about-page-hero-grid-card {
@@ -2075,12 +2467,27 @@ textarea:focus {
     width: 250px;
     z-index: 1;
   }
+
+  .project-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-page-testimonial-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project-page-testimonial-desc {
+    width: 100%;
+  }
 }
 
 @media (max-width: 900px) {
   /* The Nav Bar Styling */
 
   .delta-navbar-holder {
+    position: fixed;
+    top: 0px;
+    z-index: 7;
     height: 70px;
     width: 100%;
     background-color: var(--white);
@@ -2197,7 +2604,8 @@ textarea:focus {
   .delta-approach-title,
   .our-work-page-main-title,
   .our-work-page-main-title span,
-  .delta-projects-title {
+  .delta-projects-title,
+  .project-page-testimonial-title {
     font-size: 2rem;
   }
 
@@ -2339,14 +2747,12 @@ textarea:focus {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    justify-content: space-between;
   }
 
   .footer-section-links {
     display: flex;
     width: 100%;
-    gap: 0;
-    justify-content: space-between;
+    gap: 40px;
     flex-wrap: wrap;
   }
 
@@ -2380,6 +2786,34 @@ textarea:focus {
 
   .middle-card {
     bottom: 0px;
+  }
+
+  .project-page-testimonial-left {
+    text-align: center;
+    align-items: center;
+  }
+
+  .project-page-testimonial-section {
+    padding: 0;
+  }
+
+  .project-page-testimonial-subtitle {
+    font-size: 13px;
+    color: var(--faded-text);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .project-page-testimonial-card {
+    margin-left: 0px;
+  }
+
+  .project-page-testimonial-card-highlight {
+    border-left: 10px solid #e4b200;
+    position: relative;
+    margin: 0;
+    margin-right: 0px;
   }
 }
 
@@ -2548,7 +2982,6 @@ textarea:focus {
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
     position: relative;
-    margin: auto;
   }
   .delta-about-page-hero-grid div:nth-child(1) {
     background-image: url("../images/About-page-hero-image-1.jpg");
@@ -2602,6 +3035,14 @@ textarea:focus {
   .our-work-page,
   .contact-page {
     height: 500px;
+  }
+
+  .project-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-page-testimonial-quote {
+    margin: auto;
   }
 }
 

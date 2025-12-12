@@ -27,6 +27,28 @@
     <!-- The Main Delta container -->
     <!------------------------------>
     <div class="delta-devres-main-container">
+      <div id="projectPageSidebar" class="project-page-sidebar">
+        <div class="project-page-sidebar-header">
+          <h2>Menu</h2>
+
+          <!-- CLOSE BUTTON -->
+          <button
+            class="project-page-close-nav-btn"
+            onclick="closeProjectNav()"
+          >
+            ✕
+          </button>
+        </div>
+
+        <ul class="project-page-sidebar-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./our-work.html">Our Work</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+        <button class="btn" onclick="getStarted()">Get Started</button>
+      </div>
       <!-- Delta content container -->
       <div class="delta-container">
         <!----------------------->
@@ -36,7 +58,7 @@
           <!-- The hero section -->
           <div class="delta-hero">
             <!-- The navbar -->
-            <div class="delta-navbar-holder">
+            <div class="delta-navbar-holder" id="navbar">
               <div class="delta-navbar">
                 <!-- the logo  -->
                 <div class="delta-logo">
@@ -69,8 +91,8 @@
                   </li>
                 </ul>
                 <!-- the nav call to action button -->
-                <button>Join Us</button>
-                <div class="menu-btn">
+                <button onclick="getStarted()">Get Started</button>
+                <div class="menu-btn" onclick="openProjectNav()">
                   <img src="./assets/images/menu-icon.svg" alt="" />
                 </div>
               </div>
@@ -109,13 +131,17 @@
                 <div
                   class="delta-hero-content-paragraph-text plus-jakarta-sans-small"
                 >
-                  We are a team of diverse and experienced professionals driven
-                  by the conviction that impactful change is achieved through
-                  strategic thinking, collaborative innovation, and unwavering
-                  commitment to delivering results.
+                  We are a multidisciplinary team of development professionals
+                  dedicated to helping governments, organizations, and
+                  institutions make informed, evidence-based decisions. Through
+                  integrated research, evaluations, capacity building, project
+                  management, and system-strengthening initiatives, we deliver
+                  innovative solutions that improve service delivery, enhance
+                  governance, and drive sustainable impact across sectors.
                 </div>
                 <div class="delta-hero-content-button">
-                  <button>Get started</button> <button>Learn more</button>
+                  <button onclick="getStarted()">Get started</button>
+                  <button onclick="aboutUs()">Learn more</button>
                 </div>
               </div>
             </div>
@@ -126,16 +152,24 @@
         <!---------------------------------->
         <div class="infinite-strip">
           <div class="strip-track">
-            <span>Development Consultancy</span>
-            <span>Research</span>
-            <span>Evaluation and Strategy</span>
-            <span>Development Consultancy</span>
+            <span>Research & Evaluations</span>
+            <span>Monitoring & Assessment</span>
+            <span>Capacity Building & Training</span>
+            <span>Project Management & Implementation</span>
+            <span>Third-Party Monitoring</span>
+            <span> Knowledge Management </span>
+            <span> System Strengthening & Advisory</span>
+            <span> Policy & Governance Support </span>
 
             <!-- Duplicate for seamless looping -->
-            <span>Development Consultancy</span>
-            <span>Research</span>
-            <span>Evaluation and Strategy</span>
-            <span>Development Consultancy</span>
+            <span>Research & Evaluations</span>
+            <span>Monitoring & Assessment</span>
+            <span>Capacity Building & Training</span>
+            <span>Project Management & Implementation</span>
+            <span>Third-Party Monitoring</span>
+            <span> Knowledge Management </span>
+            <span> System Strengthening & Advisory</span>
+            <span> Policy & Governance Support </span>
           </div>
         </div>
 
@@ -150,8 +184,8 @@
                 ABOUT US
               </p>
               <h2 class="delta-about-us-title plus-jakarta-sans-large">
-                Empowering Your Success <br />
-                with Digital Expertise
+                Driving Impact<br />
+                with Stronger Systems
               </h2>
             </div>
             <div class="delta-about-us-middle-content-container">
@@ -161,9 +195,18 @@
               <!-- RIGHT CONTENT -->
               <div class="delta-about-us-content">
                 <p class="delta-about-us-description">
-                  Lorem ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s...
+                  DELTA DEVRES International is a multidisciplinary development
+                  consultancy committed to helping institutions make informed,
+                  evidence-based decisions that improve service delivery and
+                  long-term outcomes. Through integrated research, evaluations,
+                  capacity building, project management, and
+                  system-strengthening advisory, we support governments, NGOs,
+                  and private organizations in designing solutions that are
+                  inclusive, sustainable, and grounded in real-world data. Our
+                  team brings together diverse expertise, sector-wide
+                  experience, and a strong culture of collaboration—ensuring
+                  that every insight generated leads to meaningful, measurable,
+                  and scalable impact.
                 </p>
 
                 <!-- Progress List -->
@@ -172,48 +215,56 @@
                     <div
                       class="delta-about-us-progress-label-and-value-container plus-jakarta-sans-small"
                     >
-                      <div class="delta-about-us-progress-label">
-                        Marketing & Business Creativity
-                      </div>
-                      <div class="delta-about-us-progress-value">75%</div>
+                      <div class="delta-about-us-progress-label">Insight</div>
+                      <div class="delta-about-us-progress-value">92%</div>
                     </div>
                     <div class="delta-about-us-progress-bar">
-                      <span style="width: 75%"></span>
+                      <span style="width: 92%"></span>
                     </div>
+                    <p class="plus-jakarta-sans-small">
+                      High-quality research, evaluations, and assessments
+                      delivered with evidence-based precision.
+                    </p>
                   </li>
 
                   <li>
                     <div
                       class="delta-about-us-progress-label-and-value-container plus-jakarta-sans-small"
                     >
-                      <div class="delta-about-us-progress-label">
-                        Creativity & Innovation
-                      </div>
-                      <div class="delta-about-us-progress-value">60%</div>
+                      <div class="delta-about-us-progress-label">Capacity</div>
+                      <div class="delta-about-us-progress-value">85%</div>
                     </div>
 
                     <div class="delta-about-us-progress-bar">
-                      <span style="width: 60%"></span>
+                      <span style="width: 85%"></span>
                     </div>
+                    <p class="plus-jakarta-sans-small">
+                      Institutions strengthened through training, system
+                      improvements, and advisory support.
+                    </p>
                   </li>
 
                   <li>
                     <div
                       class="delta-about-us-progress-label-and-value-container plus-jakarta-sans-small"
                     >
-                      <div class="delta-about-us-progress-label">
-                        Financial Management
-                      </div>
-                      <div class="delta-about-us-progress-value">84%</div>
+                      <div class="delta-about-us-progress-label">Impact</div>
+                      <div class="delta-about-us-progress-value">90%</div>
                     </div>
                     <div class="delta-about-us-progress-bar">
-                      <span style="width: 84%"></span>
+                      <span style="width: 90%"></span>
                     </div>
+                    <p class="plus-jakarta-sans-small">
+                      Programs and interventions improved through data-driven
+                      decision-making and sustainable solutions.
+                    </p>
                   </li>
                 </ul>
 
                 <!-- CTA Button -->
-                <button class="delta-about-us-button">About Us</button>
+                <button class="delta-about-us-button" onclick="aboutUs()">
+                  See More
+                </button>
               </div>
             </div>
           </div>
@@ -289,9 +340,9 @@
                     Public Financial Management
                   </h3>
                   <p class="our-focus-area-card-text">
-                    Budget tracking and Analysis, Mid Term Expenditure framework
-                    forecast and performance tracking, review of financial tools
-                    and instructions.
+                    We support government institutions with budget analysis,
+                    expenditure tracking, financial reviews, and tools that
+                    strengthen transparency and accountability.
                   </p>
                 </div>
               </div>
@@ -306,12 +357,12 @@
                 </div>
                 <div class="our-focus-area-text-container faded-purple">
                   <h3 class="our-focus-area-card-title">
-                    Conflict Resolution and Peace Building
+                    Peace building & Conflict Resolution
                   </h3>
                   <p class="our-focus-area-card-text">
-                    Peace Building, Prevention and Countering of Violent
-                    Extremism (P/CVE), Democratic Governance, Electoral
-                    Violence, Justice Systems, Farmer Herder Conflict.
+                    Our work promotes social cohesion through research,
+                    mediation programs, P/CVE initiatives, and strategies that
+                    prevent and reduce community c
                   </p>
                 </div>
               </div>
@@ -330,8 +381,9 @@
                     Health and Well-being
                   </h3>
                   <p class="our-focus-area-card-text">
-                    HIV, Malaria, Sexual and Reproductive Health Rights (SRHR),
-                    Freedom of Religious Beliefs.
+                    We provide evidence-based insights and program evaluations
+                    across HIV, malaria, SRHR, public health systems, and
+                    community health interventions.
                   </p>
                 </div>
               </div>
@@ -345,11 +397,13 @@
                   />
                 </div>
                 <div class="our-focus-area-text-container faded-purple">
-                  <h3 class="our-focus-area-card-title">Education</h3>
+                  <h3 class="our-focus-area-card-title">
+                    Education Development
+                  </h3>
                   <p class="our-focus-area-card-text">
-                    Education in Emergencies, Accelerated Education Programs,
-                    Creative Writing, Poetry for Advocacy, Alternative
-                    education.
+                    We design and evaluate education programs—ranging from
+                    accelerated learning to alternative education—to improve
+                    access, quality, and learning outcomes.
                   </p>
                 </div>
               </div>
@@ -364,12 +418,12 @@
                 </div>
                 <div class="our-focus-area-text-container faded-blue">
                   <h3 class="our-focus-area-card-title">
-                    Economic Development
+                    Economic & Social Development
                   </h3>
                   <p class="our-focus-area-card-text">
-                    Market Systems, Access to Finance, Access to Markets,
-                    Socio-Economic Development and Humanitarian Aid,
-                    Agricultural Value Chains.
+                    Our team analyzes markets, livelihoods, finance, and
+                    humanitarian systems to drive inclusive economic growth and
+                    strengthen community resilience.
                   </p>
                 </div>
               </div>
@@ -383,13 +437,11 @@
                   />
                 </div>
                 <div class="our-focus-area-text-container faded-yellow">
-                  <h3 class="our-focus-area-card-title">
-                    Economic Development
-                  </h3>
+                  <h3 class="our-focus-area-card-title">Social Issues</h3>
                   <p class="our-focus-area-card-text">
-                    Market Systems, Access to Finance, Access to Markets,
-                    Socio-Economic Development and Humanitarian Aid,
-                    Agricultural Value Chains.
+                    We integrate GESI principles into programs, addressing
+                    issues like GBV, human rights, child protection, and
+                    culturally rooted social barriers.
                   </p>
                 </div>
               </div>
@@ -408,9 +460,9 @@
                     Environmental Sustainability
                   </h3>
                   <p class="our-focus-area-card-text">
-                    Water, Sanitation, and Hygiene (WASH), Climate Change, Flood
-                    Preparedness and Response, Plastic Recycling, Fair
-                    Circularity principle.
+                    We deliver research and solutions in WASH, climate change,
+                    flood response, recycling, and environmental resilience to
+                    support greener, sustainable communities.
                   </p>
                 </div>
               </div>
@@ -433,19 +485,21 @@
               ></span>
             </div>
             <h2 class="why-us-section-title plus-jakarta-sans-medium-small">
-              Access to evidence based <br />
+              We are Credible and<br />
               <span class="why-us-section-highligh-and-button">
                 <span
                   class="why-us-section-highlight plus-jakarta-sans-medium-small"
-                  >Decision Making</span
+                >
+                  Trustworthy</span
                 >
                 <button class="why-us-section-button plus-jakarta-sans-small">
-                  Join us
+                  Let's Talk
                 </button></span
               >
             </h2>
             <p class="why-us-section-description">
-              We give you access to different expertise from professionals
+              Partner with a team that delivers results you can measure and
+              trust.
             </p>
           </div>
         </section>
@@ -463,30 +517,20 @@
           </h2>
 
           <div class="clients-section-logos">
-            <img src="./assets/images/icon-asset-clients-1.svg" alt="Zoom" />
             <img
-              src="./assets/images/icon-asset-clients-2.svg"
-              alt="Apple Pay"
+              src="./assets/images/icon-asset-clients-1peg"
+              alt="Adamawa State Logo"
             />
+            <img src="./assets/images/icon-asset-clients-2.png" alt="CRADI" />
             <img
-              src="./assets/images/icon-asset-clients-3.svg"
-              alt="Mastercard"
+              src="./assets/images/icon-asset-clients-3.jpeg"
+              alt="goalprime"
             />
-            <img src="./assets/images/icon-asset-clients-4.svg" alt="Amazon" />
-            <img src="./assets/images/icon-asset-clients-5.svg" alt="Google" />
-            <img src="./assets/images/icon-asset-clients-6.svg" alt="Netflix" />
+            <img src="./assets/images/icon-asset-clients-4.jpeg" alt="JDPC" />
+            <img src="./assets/images/icon-asset-clients-5.jpeg" alt="YESD" />
             <img
-              src="./assets/images/icon-asset-clients-7.svg"
-              alt="LinkedIn"
-            />
-            <img
-              src="./assets/images/icon-asset-clients-8.svg"
-              alt="Dribbble"
-            />
-            <img src="./assets/images/icon-asset-clients-9.svg" alt="YouTube" />
-            <img
-              src="./assets/images/icon-asset-clients-10.svg"
-              alt="Technova"
+              src="./assets/images/icon-asset-clients-6.png"
+              alt="State House of Assembly"
             />
           </div>
         </section>
@@ -539,23 +583,15 @@
             <div class="footer-section-links">
               <div class="footer-section-column plus-jakarta-sans-small">
                 <h4>About</h4>
-                <a href="#">Project</a>
-                <a href="#">Team</a>
-                <a href="#">Awards</a>
+                <a href="./index.html">Home</a>
+                <a href="./about.html">About Us</a>
+                <a href="./our-work.html">Our Work</a>
               </div>
 
               <div class="footer-section-column plus-jakarta-sans-small">
                 <h4>Support</h4>
-                <a href="#">Help</a>
-                <a href="#">FAQ</a>
-                <a href="#">Contact</a>
-              </div>
-
-              <div class="footer-section-column plus-jakarta-sans-small">
-                <h4>Legal</h4>
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-                <a href="#">Cookies</a>
+                <a href="./projects.html">Projects</a>
+                <a href="./contact.html">Contact</a>
               </div>
             </div>
           </div>

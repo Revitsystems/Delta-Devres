@@ -32,6 +32,28 @@
     <!-- The Main Delta container -->
     <!------------------------------>
     <div class="delta-devres-main-container">
+      <div id="projectPageSidebar" class="project-page-sidebar">
+        <div class="project-page-sidebar-header">
+          <h2>Menu</h2>
+
+          <!-- CLOSE BUTTON -->
+          <button
+            class="project-page-close-nav-btn"
+            onclick="closeProjectNav()"
+          >
+            ✕
+          </button>
+        </div>
+
+        <ul class="project-page-sidebar-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./our-work.html">Our Work</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+        <button class="btn" onclick="getStarted()">Get Started</button>
+      </div>
       <!-- Delta content container -->
       <div class="delta-container">
         <!------------------------>
@@ -42,7 +64,7 @@
           <div class="delta-hero">
             <!-- The navbar -->
 
-            <div class="delta-navbar-holder">
+            <div class="delta-navbar-holder" id="navbar">
               <div class="delta-navbar">
                 <!-- the logo  -->
                 <div class="delta-logo">
@@ -51,7 +73,7 @@
                 <!-- the nav buttons  -->
                 <ul>
                   <li>
-                    <a class="open-sans-regular" href="">Home</a>
+                    <a class="open-sans-regular" href="./index.html">Home</a>
                   </li>
                   <li>
                     <a class="open-sans-regular" href="./about.html"
@@ -75,8 +97,8 @@
                   </li>
                 </ul>
                 <!-- the nav call to action button -->
-                <button>Join Us</button>
-                <div class="menu-btn">
+                <button onclick="getStarted()">Get Started</button>
+                <div class="menu-btn" onclick="openProjectNav()">
                   <img src="./assets/images/menu-icon.svg" alt="" />
                 </div>
               </div>
@@ -484,23 +506,15 @@
             <div class="footer-section-links">
               <div class="footer-section-column plus-jakarta-sans-small">
                 <h4>About</h4>
-                <a href="#">Project</a>
-                <a href="#">Team</a>
-                <a href="#">Awards</a>
+                <a href="./index.html">Home</a>
+                <a href="./about.html">About Us</a>
+                <a href="./our-work.html">Our Work</a>
               </div>
 
               <div class="footer-section-column plus-jakarta-sans-small">
                 <h4>Support</h4>
-                <a href="#">Help</a>
-                <a href="#">FAQ</a>
-                <a href="#">Contact</a>
-              </div>
-
-              <div class="footer-section-column plus-jakarta-sans-small">
-                <h4>Legal</h4>
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-                <a href="#">Cookies</a>
+                <a href="./projects.html">Projects</a>
+                <a href="./contact.html">Contact</a>
               </div>
             </div>
           </div>
