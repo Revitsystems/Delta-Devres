@@ -3040,6 +3040,10 @@ textarea:focus {
     height: 500px;
   }
 
+  .our-work-page-key-list li span {
+    font-size: 10px;
+  }
+
   .project-page-grid {
     grid-template-columns: 1fr;
   }
