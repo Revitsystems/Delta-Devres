@@ -859,7 +859,7 @@ body {
   max-width: 1300px;
   margin: auto;
   height: 700px;
-  background-image: url("../images/why-us-background-img.jpeg");
+  background-image: url("../images/why-us-background-img.jpg");
   background-position: center;
   background-size: cover;
   align-items: end;
@@ -2822,8 +2822,11 @@ textarea:focus {
   /** Delta Hero Section **/
   /************************/
 
+  .hero-page-alone {
+    margin-top: 140px;
+  }
   .delta-home-hero-section-container {
-    height: 700px;
+    height: 800px;
   }
 
   .delta-hero-content-header-text h1 {
