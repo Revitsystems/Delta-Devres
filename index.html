@@ -492,7 +492,10 @@
                 >
                   Trustworthy</span
                 >
-                <button class="why-us-section-button plus-jakarta-sans-small">
+                <button
+                  class="why-us-section-button plus-jakarta-sans-small"
+                  id="waSend"
+                >
                   Let's Talk
                 </button></span
               >
@@ -606,5 +609,15 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/Script.js"></script>
+    <script>
+      document.getElementById("waSend").addEventListener("click", () => {
+        const message = `Hello,`;
+        const url = `https://wa.me/2348020317568?text=${encodeURIComponent(
+          message
+        )}`;
+
+        window.open(url, "_blank");
+      });
+    </script>
   </body>
 </html>
