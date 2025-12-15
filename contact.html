@@ -126,29 +126,42 @@
                 clear actions.
               </p>
 
-              <form>
+              <form id="form">
                 <div class="form-row">
                   <div class="form-column">
-                    <label for="First-Name">FIRST NAME</label>
-                    <input type="text" />
+                    <label for="first_name">FIRST NAME</label>
+                    <input
+                      type="text"
+                      id="first_name"
+                      name="first_name"
+                      required
+                    />
                   </div>
+
                   <div class="form-column">
-                    <label for="Last-Name">LAST NAME</label>
-                    <input type="text" />
+                    <label for="last_name">LAST NAME</label>
+                    <input
+                      type="text"
+                      id="last_name"
+                      name="last_name"
+                      required
+                    />
                   </div>
                 </div>
 
                 <div class="form-full">
                   <label for="email">EMAIL</label>
-                  <input type="email" name="email" />
+                  <input type="email" id="email" name="email" required />
                 </div>
 
                 <div class="form-full">
-                  <label for="Message">MESSAGE</label>
-                  <textarea></textarea>
+                  <label for="message">MESSAGE</label>
+                  <textarea id="message" name="message" required></textarea>
                 </div>
 
-                <button class="contact-submit-btn">Send Message</button>
+                <button type="submit" class="contact-submit-btn">
+                  Send Message
+                </button>
               </form>
             </div>
 
