@@ -101,25 +101,22 @@
             <div class="delta-hero-content hero-page-alone">
               <ul class="delta-hero-content-image-holder">
                 <li>
-                  <img src="./assets/images/icon-asset-hero-1.jpg" alt="" />
+                  <img src="./assets/images/icon-asset-hero-1.png" alt="" />
                 </li>
                 <li>
-                  <img src="./assets/images/icon-asset-hero-2.jpg" alt="" />
+                  <img src="./assets/images/icon-asset-hero-2.png" alt="" />
                 </li>
                 <li>
-                  <img src="./assets/images/icon-asset-hero-3.jpg" alt="" />
+                  <img src="./assets/images/icon-asset-hero-3.png" alt="" />
                 </li>
-                <li>
-                  <img src="./assets/images/icon-asset-hero-4.jpg" alt="" />
-                </li>
-                <li>
+                <!-- <li>
                   <span class="plus-jakarta-sans-super-small content-text-1"
                     >20+</span
                   >
                   <span class="plus-jakarta-sans-super-small content-text-2"
                     >More</span
                   >
-                </li>
+                </li> -->
               </ul>
               <div class="delta-hero-content-hero-text-container">
                 <div class="delta-hero-content-header-text">
@@ -555,13 +552,26 @@
             </div>
             <div class="newsletter-section-for-forms">
               <p class="plus-jakarta-sans-small">Stay Up To Date</p>
-              <form class="newsletter-section-form">
+              <form
+                id="newsletter-form"
+                class="newsletter-section-form"
+                method="POST"
+                action="https://2e6ec033.sibforms.com/serve/MUIFANrPsyz2HwiV4hLo072HVftD10LMFZHTPAXHfpOEP2oY8YGmR-uInQ2AALm3mlrtpFz4u8GwgKCdPzalWpbZ2Y-HSseO6V5Iwna_fKGs4kuxKH7WiIfMGbsI0jvdWzWZpNDM0eGmWVoWtFKLUg-0JnppEfPcKd-ZjxOd0FlWW_qs4kc-OcWGcCQwADw-QHV7K3E0W5qCQlhiVQ=="
+              >
                 <input
                   type="email"
+                  name="EMAIL"
                   placeholder="Enter your email"
                   class="newsletter-section-input"
+                  required
                 />
-                <button class="newsletter-section-button">Join Us</button>
+                <button
+                  type="submit"
+                  class="newsletter-section-button"
+                  onclick="resetForm()"
+                >
+                  Join Us
+                </button>
               </form>
               <p class="plus-jakarta-sans-small the-bottom-tag-of-news-letter">
                 By subscribing, you agree to our privacy policy
@@ -578,8 +588,7 @@
             <div class="footer-section-left">
               <img src="./assets/images/delta-logo.png" alt="Logo" />
               <p class="footer-section-description plus-jakarta-sans-small">
-                Make your complicated <br />
-                finance more simple
+                Evidence-Based Solutions <br />for Sustainable Development
               </p>
             </div>
 
@@ -589,14 +598,26 @@
                 <a href="./index.html">Home</a>
                 <a href="./about.html">About Us</a>
                 <a href="./our-work.html">Our Work</a>
+                <a href="./projects.html">Project</a>
               </div>
 
               <div class="footer-section-column plus-jakarta-sans-small">
                 <h4>Support</h4>
-                <a href="./projects.html">Projects</a>
+                <a href="./legal.html#privacy">Privacy Policy</a>
+                <a href="./legal.html#terms">Terms & Conditions</a>
                 <a href="./contact.html">Contact</a>
               </div>
             </div>
+          </div>
+          <div class="footer-bottom-bar">
+            <p>© 2025 DELTA DEVRES International. All rights reserved.</p>
+
+            <p>
+              Built by
+              <a href="https://revitsystems.org" target="_blank" rel="noopener">
+                Revit Systems
+              </a>
+            </p>
           </div>
         </footer>
       </div>
@@ -617,6 +638,16 @@
         )}`;
 
         window.open(url, "_blank");
+      });
+
+      const form = document.getElementById("newsletter-form");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        setTimeout(() => {
+          form.reset();
+        }, 100);
       });
     </script>
   </body>
