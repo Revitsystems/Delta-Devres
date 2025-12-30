@@ -1499,7 +1499,6 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
   align-items: start;
 }
 
@@ -1536,6 +1535,7 @@ body {
   position: relative;
   border: 2px solid var(--delta-blue);
   overflow: hidden;
+  background-image: url("../images/step\ by\ step\ process\ 3.jpg");
   background-position: 10% center;
   background-size: cover;
   color: var(--white);
@@ -1557,34 +1557,9 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* 1st card */
-.delta-approach-slider .delta-approach-card:nth-child(1) {
-  background-image: url("../images/step\ by\ step\ process\ 1.jpeg");
-}
-
-/* 2nd card */
-.delta-approach-slider .delta-approach-card:nth-child(2) {
-  background-image: url("../images/step\ by\ step\ process\ 2.jpeg");
-}
-
-/* 3rd card */
-.delta-approach-slider .delta-approach-card:nth-child(3) {
-  background-image: url("../images/step\ by\ step\ process\ 3.jpg");
-}
-
-/* 4th card */
-.delta-approach-slider .delta-approach-card:nth-child(4) {
-  background-image: url("../images/step\ by\ step\ process\ 4.jpeg");
-}
-
-/* 5th card */
-.delta-approach-slider .delta-approach-card:nth-child(5) {
-  background-image: url("../images/step\ by\ step\ process\ 5.jpeg");
-}
-
 /* 6th card */
 .delta-approach-slider .delta-approach-card:nth-child(6) {
-  background-image: url("../images/step\ by\ step\ process\ 6.jpeg");
+  background-image: url("../images/step\ by\ step\ process\ 4.jpeg");
 }
 
 /***************************************/
