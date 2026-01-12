@@ -528,8 +528,10 @@
             </div>
           </div>
           <div class="footer-bottom-bar">
-            <p>© 2025 DELTA DEVRES International. All rights reserved.</p>
-
+            <p>
+              © <span id="year"></span> DELTA DEVRES International. All rights
+              reserved.
+            </p>
             <p>
               Built by
               <a href="https://revitsystems.org" target="_blank" rel="noopener">
@@ -547,6 +549,9 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
     <script src="./assets/js/Script.js"></script>
   </body>
 </html>

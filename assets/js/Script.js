@@ -30,6 +30,10 @@ window.addEventListener("scroll", () => {
 const form = document.getElementById("form");
 const submitBtn = form.querySelector('button[type="submit"]');
 
+/*=============================*/
+/*=== FORM SUBMISSION LOGIC===*/
+/*=============================*/
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -60,5 +64,12 @@ form.addEventListener("submit", async (e) => {
   } finally {
     submitBtn.textContent = originalText;
     submitBtn.disabled = false;
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const year = document.getElementById("year");
+  if (year) {
+    year.textContent = new Date().getFullYear();
   }
 });

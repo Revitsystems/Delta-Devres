@@ -458,7 +458,10 @@
             </div>
           </div>
           <div class="footer-bottom-bar">
-            <p>© 2025 DELTA DEVRES International. All rights reserved.</p>
+            <p>
+              © <span id="year">2025</span> DELTA DEVRES International. All
+              rights reserved.
+            </p>
 
             <p>
               Built by
@@ -491,6 +494,9 @@
           btn.textContent = isHidden ? "Read less" : "Read more";
         });
       });
+    </script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
